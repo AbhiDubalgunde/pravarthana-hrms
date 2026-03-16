@@ -1,0 +1,48 @@
+# =============================================
+# Server Configuration
+# =============================================
+server.port=8080
+spring.application.name=pravarthana-hrms-backend
+
+# =============================================
+# Database Configuration (Supabase PostgreSQL)
+# =============================================
+# Get these from: https://supabase.com/dashboard → Your Project → Settings → Database
+spring.datasource.url=jdbc:postgresql://db.xxxxx.supabase.co:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=YOUR_SUPABASE_PASSWORD
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA/Hibernate
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+
+# =============================================
+# JWT Configuration
+# =============================================
+# Generate a secure random string (minimum 256 bits / 32 characters)
+jwt.secret=YOUR_JWT_SECRET_KEY_HERE_MINIMUM_256_BITS
+jwt.expiration=86400000
+
+# =============================================
+# CORS Configuration
+# =============================================
+cors.allowed-origins=http://localhost:3000,https://your-vercel-app.vercel.app
+
+# =============================================
+# Email Configuration (Gmail)
+# =============================================
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your-email@gmail.com
+spring.mail.password=your-app-password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+# =============================================
+# Logging
+# =============================================
+logging.level.com.pravarthana.hrms=INFO
+logging.level.org.springframework.security=DEBUG
